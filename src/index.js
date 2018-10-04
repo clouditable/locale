@@ -15,18 +15,18 @@ import App from './components/App';
 
 const BASE_URL = 'https://homework.mylocale.co.uk/graphql';
 const AUTH_TOKEN = 'auth-token';
+const token = localStorage.getItem(AUTH_TOKEN);
 
 const httpLink = new HttpLink({
   uri: BASE_URL,
   headers: {
     authorization: `Bearer ${
-      process.env.PERSONAL_ACCESS_TOKEN
+      token
       }`,
   },
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem(AUTH_TOKEN)
   return {
     headers: {
       ...headers,

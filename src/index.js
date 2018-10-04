@@ -13,8 +13,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import App from './components/App';
 
-//.env'den al
-const BASE_URL = 'http://mobileapisample-env-1.r7vrted8qf.eu-west-1.elasticbeanstalk.com/graphql';
+const BASE_URL = process.env.REACT_APP_API_URL;
 const AUTH_TOKEN = 'auth-token';
 
 const httpLink = new HttpLink({

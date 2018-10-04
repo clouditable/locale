@@ -13,7 +13,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import App from './components/App';
 
-const BASE_URL = process.env.REACT_APP_API_URL;
+const BASE_URL = 'https://homework.mylocale.co.uk/graphql';
 const AUTH_TOKEN = 'auth-token';
 
 const httpLink = new HttpLink({

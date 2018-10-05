@@ -12,7 +12,7 @@ describe('<Home />', () => {
   });
   it('should view welcome message with token', () => {
     const token = "blabla"
-    const wrapper = shallow(<Home authToken={token} />);
+    const wrapper = shallow(<Home authed={token} />);
     expect(wrapper.text()).toContain('Welcome');
   });
 });

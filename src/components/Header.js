@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
-//.env'den al
-const AUTH_TOKEN = 'auth-token';
+const AUTH_TOKEN = process.env.REACT_APP_AUTH_TOKEN;
 
 class Header extends Component {
   render() {

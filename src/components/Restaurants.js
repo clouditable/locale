@@ -7,8 +7,9 @@ class Restaurants extends Component {
     const limit = 10,
       index = 1,
       delivery = false,
-      showOffline = false;
-    return { index, limit, delivery, showOffline }
+      showOffline = true,
+      userAddressId = localStorage.getItem('addressId');
+    return { index, limit, delivery, showOffline, userAddressId}
   }
   render() {
     return (

@@ -12,6 +12,8 @@ class Profile extends Component {
           }
           if (data && data.user) {
             const { addresses, email, firstName, lastName, mobileNumber, points, uid } = data.user;
+            const addressIds = addresses.map(add => add.id);
+            localStorage.setItem('addressId', addressIds);
             return (
               <div className="container emp-profile" style={{ padding: "150px 0", margin: "0 auto", maxWidth: "320" }}>
 

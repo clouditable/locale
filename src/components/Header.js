@@ -33,6 +33,7 @@ class Header extends Component {
                 <li className="nav-item"
                   onClick={() => {
                     localStorage.removeItem(AUTH_TOKEN)
+                    localStorage.removeItem('addressId');
                     this.props.history.push(`/`)
                   }}
                 >

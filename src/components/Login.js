@@ -33,7 +33,7 @@ class Login extends Component {
   _confirm = async data => {
     const token = data.loginWithEmail ? data.loginWithEmail.token : '';
     this._saveUserData(token)
-    this.props.history.push(`/`)
+    this.props.history.push(`/profile`)
   }
 
   _saveUserData = token => {

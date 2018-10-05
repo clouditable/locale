@@ -1,8 +1,8 @@
 import gql from 'graphql-tag'
 
 export const RESTAURANTS = gql`
-query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!) {
-restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline) {
+query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!, $userAddressId: Int!) {
+restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline, userAddressId:$userAddressId) {
   avgScore
   distance
   minOrderAmount

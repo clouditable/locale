@@ -4,8 +4,7 @@ import { LoginButton } from '../helpers/mutations/login_mutation';
 import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../stylesheet/Login.css";
 
-//.env'den al
-const AUTH_TOKEN = 'auth-token'
+const AUTH_TOKEN = process.env.REACT_APP_AUTH_TOKEN;
 
 class Login extends Component {
   constructor(props) {

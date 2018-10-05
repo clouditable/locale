@@ -13,8 +13,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 import App from './components/App';
 
-const BASE_URL = 'https://homework.mylocale.co.uk/graphql';
-const AUTH_TOKEN = 'auth-token';
+const BASE_URL = process.env.REACT_APP_API_URL;
+const AUTH_TOKEN = process.env.REACT_APP_AUTH_TOKEN;
 const token = localStorage.getItem(AUTH_TOKEN);
 
 const httpLink = new HttpLink({
@@ -27,6 +27,7 @@ const httpLink = new HttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem(AUTH_TOKEN);
   return {
     headers: {
       ...headers,

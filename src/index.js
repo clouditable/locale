@@ -28,7 +28,6 @@ const httpLink = new HttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  console.log(headers)
   const token = localStorage.getItem(AUTH_TOKEN);
   return {
     headers: {

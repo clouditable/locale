@@ -20,6 +20,7 @@ const token = localStorage.getItem(AUTH_TOKEN);
 const httpLink = new HttpLink({
   uri: BASE_URL,
   headers: {
+    'content-type': 'application/json',
     authorization: `Bearer ${
       token
       }`,
@@ -27,10 +28,12 @@ const httpLink = new HttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
+  console.log(headers)
   const token = localStorage.getItem(AUTH_TOKEN);
   return {
     headers: {
       ...headers,
+      'content-type': 'application/json',
       authorization: token ? `Bearer ${token}` : '',
     },
   }

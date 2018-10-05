@@ -11,7 +11,6 @@ export const LOGIN_MUTATION = gql`
 }`;
 
 export const LoginButton = ({ email, password, _confirm, _validate }) => (
-
   <Mutation
     mutation={LOGIN_MUTATION}
     variables={{ email, password }}
@@ -30,6 +29,4 @@ export const LoginButton = ({ email, password, _confirm, _validate }) => (
           </Button>
     )}
   </Mutation>
-
-
 );

@@ -14,10 +14,8 @@
     "react-apollo": "^2.2.4",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
-    "react-router-config": "^4.4.0-beta.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.3",
-    "waait": "^1.0.2"
+    "react-scripts": "2.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,6 +37,7 @@
   "devDependencies": {
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
-    "jest-enzyme": "^6.1.2"
+    "jest-enzyme": "^6.1.2",
+    "waait": "^1.0.2"
   }
 }

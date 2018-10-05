@@ -4169,11 +4169,24 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
           }
         }
       >
-        <p
-          className="navbar-text navbar-right"
-        >
-          Loading...
-        </p>
+        <Loading>
+          <div
+            className="container emp-profile"
+            style={
+              Object {
+                "margin": "0 auto",
+                "maxWidth": "320",
+                "padding": "150px 0",
+              }
+            }
+          >
+            <p
+              className="navbar-text navbar-right"
+            >
+              Loading...
+            </p>
+          </div>
+        </Loading>
       </Query>
     </Restaurants>
   </ApolloProvider>

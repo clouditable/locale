@@ -76,6 +76,20 @@ exports[`<Restaurants /> should render restaurants with data 1`] = `
                             },
                           },
                         },
+                        Object {
+                          "kind": "Argument",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "userAddressId",
+                          },
+                          "value": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "userAddressId",
+                            },
+                          },
+                        },
                       ],
                       "directives": Array [],
                       "kind": "Field",
@@ -360,12 +374,33 @@ exports[`<Restaurants /> should render restaurants with data 1`] = `
                       },
                     },
                   },
+                  Object {
+                    "defaultValue": undefined,
+                    "kind": "VariableDefinition",
+                    "type": Object {
+                      "kind": "NonNullType",
+                      "type": Object {
+                        "kind": "NamedType",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "Int",
+                        },
+                      },
+                    },
+                    "variable": Object {
+                      "kind": "Variable",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "userAddressId",
+                      },
+                    },
+                  },
                 ],
               },
             ],
             "kind": "Document",
             "loc": Object {
-              "end": 348,
+              "end": 400,
               "start": 0,
             },
           },
@@ -462,6 +497,20 @@ exports[`<Restaurants /> should render restaurants with data 1`] = `
                               "name": Object {
                                 "kind": "Name",
                                 "value": "showOffline",
+                              },
+                            },
+                          },
+                          Object {
+                            "kind": "Argument",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "userAddressId",
+                            },
+                            "value": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "userAddressId",
                               },
                             },
                           },
@@ -749,12 +798,33 @@ exports[`<Restaurants /> should render restaurants with data 1`] = `
                         },
                       },
                     },
+                    Object {
+                      "defaultValue": undefined,
+                      "kind": "VariableDefinition",
+                      "type": Object {
+                        "kind": "NonNullType",
+                        "type": Object {
+                          "kind": "NamedType",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "Int",
+                          },
+                        },
+                      },
+                      "variable": Object {
+                        "kind": "Variable",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "userAddressId",
+                        },
+                      },
+                    },
                   ],
                 },
               ],
               "kind": "Document",
               "loc": Object {
-                "end": 348,
+                "end": 400,
                 "start": 0,
               },
             },
@@ -762,7 +832,8 @@ exports[`<Restaurants /> should render restaurants with data 1`] = `
               "delivery": false,
               "index": 1,
               "limit": 10,
-              "showOffline": false,
+              "showOffline": true,
+              "userAddressId": null,
             },
           },
         },
@@ -851,6 +922,20 @@ exports[`<Restaurants /> should render restaurants with data 1`] = `
                                 "name": Object {
                                   "kind": "Name",
                                   "value": "showOffline",
+                                },
+                              },
+                            },
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "userAddressId",
+                              },
+                              "value": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "userAddressId",
                                 },
                               },
                             },
@@ -1159,16 +1244,37 @@ exports[`<Restaurants /> should render restaurants with data 1`] = `
                           },
                         },
                       },
+                      Object {
+                        "defaultValue": undefined,
+                        "kind": "VariableDefinition",
+                        "type": Object {
+                          "kind": "NonNullType",
+                          "type": Object {
+                            "kind": "NamedType",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "Int",
+                            },
+                          },
+                        },
+                        "variable": Object {
+                          "kind": "Variable",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "userAddressId",
+                          },
+                        },
+                      },
                     ],
                   },
                 ],
                 "kind": "Document",
                 "loc": Object {
-                  "end": 348,
+                  "end": 400,
                   "source": Object {
                     "body": "
-query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!) {
-restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline) {
+query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!, $userAddressId: Int!) {
+restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline, userAddressId:$userAddressId) {
   avgScore
   distance
   minOrderAmount
@@ -1203,7 +1309,8 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                 "delivery": false,
                 "index": 1,
                 "limit": 10,
-                "showOffline": false,
+                "showOffline": true,
+                "userAddressId": null,
               },
             },
           ],
@@ -1303,6 +1410,20 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                                     "name": Object {
                                       "kind": "Name",
                                       "value": "showOffline",
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "userAddressId",
+                                  },
+                                  "value": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "userAddressId",
                                     },
                                   },
                                 },
@@ -1611,16 +1732,37 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                               },
                             },
                           },
+                          Object {
+                            "defaultValue": undefined,
+                            "kind": "VariableDefinition",
+                            "type": Object {
+                              "kind": "NonNullType",
+                              "type": Object {
+                                "kind": "NamedType",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "Int",
+                                },
+                              },
+                            },
+                            "variable": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "userAddressId",
+                              },
+                            },
+                          },
                         ],
                       },
                     ],
                     "kind": "Document",
                     "loc": Object {
-                      "end": 348,
+                      "end": 400,
                       "source": Object {
                         "body": "
-query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!) {
-restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline) {
+query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!, $userAddressId: Int!) {
+restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline, userAddressId:$userAddressId) {
   avgScore
   distance
   minOrderAmount
@@ -1655,7 +1797,8 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                     "delivery": false,
                     "index": 1,
                     "limit": 10,
-                    "showOffline": false,
+                    "showOffline": true,
+                    "userAddressId": null,
                   },
                 },
               ],
@@ -1742,6 +1885,20 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                                 "name": Object {
                                   "kind": "Name",
                                   "value": "showOffline",
+                                },
+                              },
+                            },
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "userAddressId",
+                              },
+                              "value": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "userAddressId",
                                 },
                               },
                             },
@@ -2050,16 +2207,37 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                           },
                         },
                       },
+                      Object {
+                        "defaultValue": undefined,
+                        "kind": "VariableDefinition",
+                        "type": Object {
+                          "kind": "NonNullType",
+                          "type": Object {
+                            "kind": "NamedType",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "Int",
+                            },
+                          },
+                        },
+                        "variable": Object {
+                          "kind": "Variable",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "userAddressId",
+                          },
+                        },
+                      },
                     ],
                   },
                 ],
                 "kind": "Document",
                 "loc": Object {
-                  "end": 348,
+                  "end": 400,
                   "source": Object {
                     "body": "
-query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!) {
-restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline) {
+query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!, $userAddressId: Int!) {
+restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline, userAddressId:$userAddressId) {
   avgScore
   distance
   minOrderAmount
@@ -2101,8 +2279,8 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                 "_subscriber": [Function],
                 "isCurrentlyPolling": false,
                 "isTornDown": false,
-                "lastError": [Error: Network error: No more mocked responses for the query: query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!) {
-  restaurants(limit: $limit, index: $index, delivery: $delivery, showOffline: $showOffline) {
+                "lastError": [Error: Network error: No more mocked responses for the query: query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!, $userAddressId: Int!) {
+  restaurants(limit: $limit, index: $index, delivery: $delivery, showOffline: $showOffline, userAddressId: $userAddressId) {
     avgScore
     distance
     minOrderAmount
@@ -2126,7 +2304,7 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
     __typename
   }
 }
-, variables: {"index":1,"limit":10,"delivery":false,"showOffline":false}],
+, variables: {"index":1,"limit":10,"delivery":false,"showOffline":true,"userAddressId":null}],
                 "lastResult": Object {
                   "data": undefined,
                   "loading": true,
@@ -2221,6 +2399,20 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                                     "name": Object {
                                       "kind": "Name",
                                       "value": "showOffline",
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "userAddressId",
+                                  },
+                                  "value": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "userAddressId",
                                     },
                                   },
                                 },
@@ -2508,12 +2700,33 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                               },
                             },
                           },
+                          Object {
+                            "defaultValue": undefined,
+                            "kind": "VariableDefinition",
+                            "type": Object {
+                              "kind": "NonNullType",
+                              "type": Object {
+                                "kind": "NamedType",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "Int",
+                                },
+                              },
+                            },
+                            "variable": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "userAddressId",
+                              },
+                            },
+                          },
                         ],
                       },
                     ],
                     "kind": "Document",
                     "loc": Object {
-                      "end": 348,
+                      "end": 400,
                       "start": 0,
                     },
                   },
@@ -2521,7 +2734,8 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                     "delivery": false,
                     "index": 1,
                     "limit": 10,
-                    "showOffline": false,
+                    "showOffline": true,
+                    "userAddressId": null,
                   },
                 },
                 "queryId": "1",
@@ -2540,7 +2754,8 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                   "delivery": false,
                   "index": 1,
                   "limit": 10,
-                  "showOffline": false,
+                  "showOffline": true,
+                  "userAddressId": null,
                 },
               },
               "subscriptions": Array [],
@@ -2617,6 +2832,20 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                                   "name": Object {
                                     "kind": "Name",
                                     "value": "showOffline",
+                                  },
+                                },
+                              },
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "userAddressId",
+                                },
+                                "value": Object {
+                                  "kind": "Variable",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "userAddressId",
                                   },
                                 },
                               },
@@ -2925,16 +3154,37 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                             },
                           },
                         },
+                        Object {
+                          "defaultValue": undefined,
+                          "kind": "VariableDefinition",
+                          "type": Object {
+                            "kind": "NonNullType",
+                            "type": Object {
+                              "kind": "NamedType",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "Int",
+                              },
+                            },
+                          },
+                          "variable": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "userAddressId",
+                            },
+                          },
+                        },
                       ],
                     },
                   ],
                   "kind": "Document",
                   "loc": Object {
-                    "end": 348,
+                    "end": 400,
                     "source": Object {
                       "body": "
-query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!) {
-restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline) {
+query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!, $userAddressId: Int!) {
+restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline, userAddressId:$userAddressId) {
   avgScore
   distance
   minOrderAmount
@@ -2971,8 +3221,8 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                     "displayName": "Query",
                   },
                 },
-                "networkError": [Error: No more mocked responses for the query: query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!) {
-  restaurants(limit: $limit, index: $index, delivery: $delivery, showOffline: $showOffline) {
+                "networkError": [Error: No more mocked responses for the query: query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!, $userAddressId: Int!) {
+  restaurants(limit: $limit, index: $index, delivery: $delivery, showOffline: $showOffline, userAddressId: $userAddressId) {
     avgScore
     distance
     minOrderAmount
@@ -2996,14 +3246,15 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
     __typename
   }
 }
-, variables: {"index":1,"limit":10,"delivery":false,"showOffline":false}],
+, variables: {"index":1,"limit":10,"delivery":false,"showOffline":true,"userAddressId":null}],
                 "networkStatus": 8,
                 "previousVariables": null,
                 "variables": Object {
                   "delivery": false,
                   "index": 1,
                   "limit": 10,
-                  "showOffline": false,
+                  "showOffline": true,
+                  "userAddressId": null,
                 },
               },
             },
@@ -3110,6 +3361,20 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                                   },
                                 },
                               },
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "userAddressId",
+                                },
+                                "value": Object {
+                                  "kind": "Variable",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "userAddressId",
+                                  },
+                                },
+                              },
                             ],
                             "directives": Array [],
                             "kind": "Field",
@@ -3415,16 +3680,37 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                             },
                           },
                         },
+                        Object {
+                          "defaultValue": undefined,
+                          "kind": "VariableDefinition",
+                          "type": Object {
+                            "kind": "NonNullType",
+                            "type": Object {
+                              "kind": "NamedType",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "Int",
+                              },
+                            },
+                          },
+                          "variable": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "userAddressId",
+                            },
+                          },
+                        },
                       ],
                     },
                   ],
                   "kind": "Document",
                   "loc": Object {
-                    "end": 348,
+                    "end": 400,
                     "source": Object {
                       "body": "
-query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!) {
-restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline) {
+query ($index: Int!, $limit: Int!, $delivery: Boolean!, $showOffline: Boolean!, $userAddressId: Int!) {
+restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOffline, userAddressId:$userAddressId) {
   avgScore
   distance
   minOrderAmount
@@ -3459,7 +3745,8 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                   "delivery": false,
                   "index": 1,
                   "limit": 10,
-                  "showOffline": false,
+                  "showOffline": true,
+                  "userAddressId": null,
                 },
               },
             ],
@@ -3540,6 +3827,20 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                             "name": Object {
                               "kind": "Name",
                               "value": "showOffline",
+                            },
+                          },
+                        },
+                        Object {
+                          "kind": "Argument",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "userAddressId",
+                          },
+                          "value": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "userAddressId",
                             },
                           },
                         },
@@ -3827,12 +4128,33 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
                       },
                     },
                   },
+                  Object {
+                    "defaultValue": undefined,
+                    "kind": "VariableDefinition",
+                    "type": Object {
+                      "kind": "NonNullType",
+                      "type": Object {
+                        "kind": "NamedType",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "Int",
+                        },
+                      },
+                    },
+                    "variable": Object {
+                      "kind": "Variable",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "userAddressId",
+                      },
+                    },
+                  },
                 ],
               },
             ],
             "kind": "Document",
             "loc": Object {
-              "end": 348,
+              "end": 400,
               "start": 0,
             },
           }
@@ -3842,7 +4164,8 @@ restaurants(limit:$limit, index:$index, delivery:$delivery, showOffline:$showOff
             "delivery": false,
             "index": 1,
             "limit": 10,
-            "showOffline": false,
+            "showOffline": true,
+            "userAddressId": null,
           }
         }
       >

@@ -12,31 +12,53 @@ import Restaurants from './Restaurants';
 import Orders from './Orders';
 import Profile from './Profile';
 
-const AUTH_TOKEN = 'auth-token';
-const authToken = localStorage.getItem(AUTH_TOKEN);
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  return (<Route {...rest} render={(props) => {
-    props['token'] = authToken;
-    return (authToken
-      ? <Component {...props} />
-      : <Redirect to='/login' />)
-  }
-
-  } />)
+const renderMergedProps = (component, ...rest) => {
+  const finalProps = Object.assign({}, ...rest)
+  return React.createElement(component, finalProps)
 }
+
+const PrivateRoute = ({ component, ...rest }) => {
+  const authed = localStorage.getItem('auth-token');
+  return (
+    <Route
+      {...rest}
+      render={routeProps =>
+        authed ? (
+          renderMergedProps(component, routeProps, rest)
+        ) : (
+            <Redirect
+              to={{ pathname: '/login', state: { from: routeProps.location } }}
+            />
+          )}
+    />
+  )
+}
+
+const PublicRoute = ({ component, ...rest }) => {
+  const authed = localStorage.getItem('auth-token');
+  return (
+    <Route
+      {...rest}
+      render={routeProps => {
+        return renderMergedProps(component, routeProps, rest, { authed: authed })
+      }}
+    />
+  )
+};
 
 class App extends Component {
   render() {
+
     return (
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" render={props => <Home authToken={authToken} />} />
+          <PublicRoute exact path="/" component={Home} />
           <PrivateRoute path="/restaurants" component={Restaurants} />
           <PrivateRoute path="/orders" component={Orders} />
           <PrivateRoute path="/profile" component={Profile} />
-          <Route exact path="/login" component={Login} />
+          <PublicRoute exact path="/login" component={Login} />
         </Switch>
       </div>
 

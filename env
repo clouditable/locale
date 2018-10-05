@@ -1,2 +1,3 @@
 REACT_APP_API_URL=https://homework.mylocale.co.uk/graphql
 REACT_APP_AUTH_TOKEN=auth-token
+REACT_APP_ADDRESS_ID=addressId
